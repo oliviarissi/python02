@@ -1,6 +1,21 @@
 #!/usr/bin/env python3
 
 def water_plants(plant_list) -> None:
+    """
+    Water plants in the given list.
+
+    Iterates over the plant list, waters each plant, and raises a ValueError
+    if any plant is `None`. Ensures cleanup happens after the operation.
+
+    Parameters:
+    plant_list (list): List of plant names to water.
+
+    Returns:
+    None
+
+    Raises:
+    ValueError: If `None` is found in the plant list.
+    """
 
     print("Opening watering system")
 
@@ -16,6 +31,15 @@ def water_plants(plant_list) -> None:
 
 
 def test_watering_system() -> None:
+    """
+    Test the watering system with valid and invalid plant lists.
+
+    Demonstrates normal watering and handles the `ValueError` when `None`
+    is in the list, ensuring cleanup is done even if errors occur.
+
+    Returns:
+    None
+    """
 
     plant_list_ok = ["tomato", "lettuce", "carrots",]
     plant_list_not_ok = ["tomato", None, "carrots",]

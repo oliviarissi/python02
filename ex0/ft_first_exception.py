@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
 
-
 def check_temperature(temp_str: str) -> int | None:
-    """Validate temp input (str), handle exceptions, return temp as int."""
+    """
+    Validate and convert temperature input.
+
+    Converts temp_str to int, checks if within range (0-40°C),
+    raises ValueError if invalid or out of range.
+
+    Parameters:
+    temp_str (str): Temperature as string.
+
+    Returns:
+    int | None: Valid temperature or None if invalid.
+    """
 
     print(f"Testing temperature: {temp_str}")
 
@@ -25,7 +35,14 @@ def check_temperature(temp_str: str) -> int | None:
 
 
 def test_temperature_input() -> None:
-    """Test temperature validation with valid and invalid inputs."""
+    """
+    Run tests on check_temperature.
+
+    Tests multiple cases to ensure validation works.
+
+    Returns:
+    None
+    """
 
     print("=== Garden Temperature Checker ===\n")
 

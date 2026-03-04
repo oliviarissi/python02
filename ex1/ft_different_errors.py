@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 
 def garden_operations() -> None:
+    """
+    Demonstrate handling various errors.
+
+    Tests and catches different exceptions:
+    - ValueError: Invalid literal for int().
+    - ZeroDivisionError: Division by zero.
+    - FileNotFoundError: Missing file.
+    - KeyError: Missing dictionary key.
+    - Multiple exceptions: Handles both ValueError and
+    ZeroDivisionError together.
+
+    Returns:
+    None
+    """
 
     print("Testing ValueError...")
     try:
@@ -48,6 +62,16 @@ def garden_operations() -> None:
 
 
 def test_error_types() -> None:
+    """
+    Run error type demonstrations.
+
+    Calls garden_operations to test and print error handling
+    for various exceptions.
+
+    Returns:
+    None
+    """
+
     print("=== Garden Error Types Demo ===\n")
 
     garden_operations()
